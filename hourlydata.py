@@ -28,7 +28,7 @@ if hourly_data:
  
     # Upload to S3
     bucket_name = 'weatherdatafrom20'
-    s3_key = 'hourlydata.csv'
+    s3_key = 'hourlydatadocker.csv'
     s3 = boto3.client('s3')
     try:
         s3.upload_fileobj(csv_bytes, bucket_name, s3_key)
